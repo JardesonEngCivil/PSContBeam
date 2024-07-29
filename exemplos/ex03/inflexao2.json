@@ -1,0 +1,41 @@
+{   
+    "estrutura": {"nos" : {"1": 0.0, "2": 10.0, "3": 20.0, "4": 30.0},
+    "elementos" : {"1": ["1", "2"], "2" : ["2","3"], "3": ["3", "4"]},
+    "apoios" : {"1": "hinged", "2" : "roll", "3" : "roll", "4" : "roll"}},
+
+    "tracado":
+    [   
+        ["retilineo",       [[0.0, 0.75],[2.35, 0.75]], 0.75],
+        ["parabolainflexao", [[2.35, 0.75],[5.96, 0.08]], 0.75, 0.5],
+        ["parabolainflexao", [[5.96, 0.08],[10.0, 1.28]], 0.75, 0.5],
+        ["parabolainflexao", [[10.0, 1.28],[15.0, 0.16]], 0.75, 0.5],
+        ["parabolainflexao", [[15.0, 0.16],[20.0, 1.28]], 0.75, 0.5],
+        ["parabolainflexao", [[20.0, 1.28],[24.04, 0.08]], 0.75, 0.5],
+        ["parabolainflexao", [[24.04, 0.08],[27.65, 0.75]], 0.75, 0.5],
+        ["retilineo",        [[27.65, 0.75],[30.0, 0.75]], 0.75]
+    ],
+
+    "carregamento" : {
+    "permanente" : 0.5, 
+    "acidental" : 0.3,
+    "tipo" : "residencial",
+    "peso_proprio" : 2.25
+    },
+
+    "concreto" : {
+        "tempo" : 5,
+        "tipo_cimento" :"cp i",
+        "fck" : 30
+    },
+
+    "forca_protensao": {
+        "type" : "discreto",
+        "x" : [0, 10, 20, 30],
+
+            "f0" :[14.9, 14.9, 14.9, 14.9],
+
+        "finf": [14.9, 14.9, 14.9, 14.9]
+        
+
+    }
+}
